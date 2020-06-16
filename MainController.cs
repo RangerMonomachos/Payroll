@@ -11,18 +11,18 @@ namespace Payroll
     {
         public static string checkString(string input)
         {
-            while (true)
-            {
-                if (string.IsNullOrEmpty(input))
-                {
-                    Console.WriteLine("Nothing detected. Try again");
-                    input = Console.ReadLine();
-                }
-                else
-                {
-                    break;
-                }
-            }
+            //while (true)
+            //{
+            //    if (string.IsNullOrEmpty(input))
+            //    {
+            //        Console.WriteLine("Nothing detected. Try again");
+            //        input = Console.ReadLine();
+            //    }
+            //    else
+            //    {
+            //        break;
+            //    }
+            //}
             return input;
         }
         public static int checkInt (string input)
@@ -34,8 +34,9 @@ namespace Payroll
                 corectinput = int.TryParse(input, out output);
                 if (corectinput == false)
                 {
-                    Console.WriteLine("incorect input. try again.");
-                    input = Console.ReadLine();
+                    //Console.WriteLine("incorect input. try again.");
+                    //input = Console.ReadLine();
+                    return -100;
                 }
             }
             return output;
@@ -49,8 +50,9 @@ namespace Payroll
                 corectinput = double.TryParse(input, out output);
                 if (corectinput == false)
                 {
-                    Console.WriteLine("incorect input. try again.");
-                    input = Console.ReadLine();
+                    //Console.WriteLine("incorect input. try again.");
+                    //input = Console.ReadLine();
+                    return -100.0;
                 }
 
             }

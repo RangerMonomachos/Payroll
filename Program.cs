@@ -24,10 +24,7 @@ namespace Payroll
             int choice;
             while (true)
             {
-                Console.WriteLine("make a choice:");
-                Console.WriteLine("1) Add a new Salaried Employee.");
-                Console.WriteLine("2) Add a new Hourly Employee.");
-                Console.WriteLine("3) print the weekly report. ");
+                Console.WriteLine(menu());
                 choice = MainController.checkInt(Console.ReadLine());
                 if (choice == 1)
                 {
@@ -50,6 +47,10 @@ namespace Payroll
             }
 
          
+        }
+        public static string menu()
+        {
+            return "make a choice:\n1) Add a new Salaried Employee.\n2) Add a new Hourly Employee.\n3) print the weekly report. ";
         }
         
     }
