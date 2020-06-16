@@ -8,9 +8,29 @@ namespace Payroll
 {
     public abstract class Employee //a base class for both HourlyEmployee as well as SalariedEmployee
     {
-        public abstract string name { get; }
-        public abstract int Age { get; }
-        public abstract int EmployeeID { get; }
+        private string First;
+        private string Last;
+        private int Age;
+        private int Id;
+        public Employee(string first, string last, int age, int ID)
+        {
+            First = first;
+            Last = last;
+            Age = age;
+            Id = ID;
+        }
+        public string Getname()
+        {
+            return Last + ", " + First;
+        }
+        public int GetAge()
+        {
+            return Age;
+        }
+        public int GetEmployeeID()
+        {
+            return Id;
+        }
         public abstract string CalculatePay();
     }
 }

@@ -10,17 +10,26 @@ namespace Payroll
     {
         static void Main(string[] args)
         {
+
+
+            mainMenu();
+            Console.WriteLine("Thank you. Come again");
+            Console.ReadLine();
+
+        }
+        public static void mainMenu()
+        {
             List<HourlyEmployee> hourlyEmployees = new List<HourlyEmployee>();
             List<SalariedEmployee> salariedEmployees = new List<SalariedEmployee>();
             int choice;
-            while(true)
+            while (true)
             {
                 Console.WriteLine("make a choice:");
                 Console.WriteLine("1) Add a new Salaried Employee.");
                 Console.WriteLine("2) Add a new Hourly Employee.");
                 Console.WriteLine("3) print the weekly report. ");
                 choice = MainController.checkInt(Console.ReadLine());
-                if(choice == 1)
+                if (choice == 1)
                 {
                     salariedEmployees.Add(MainController.AddSalariedEmployee());
                 }
@@ -39,8 +48,9 @@ namespace Payroll
                     Console.WriteLine();
                 }
             }
-            Console.WriteLine("Thank you. Come again");
-            Console.ReadLine();
+
+         
         }
+        
     }
 }

@@ -16,34 +16,13 @@ namespace Payroll
         double total;
         double totalFICA;
         double totalFIT;
-        public SalariedEmployee(string First, string Last, int age, int Id, double PayForMonth)
+        public SalariedEmployee(string First, string Last, int age, int Id, double PayForMonth) : base(First, Last, age, Id)
         {
             Fname = First;
             Lname = Last;
             ageOfEmployee = age;
             ID = Id;
             Mounthpay = PayForMonth;
-        }
-        public override string name
-        {
-            get
-            {
-                return Lname + ", " + Fname;
-            }
-        }
-        public override int Age
-        {
-            get
-            {
-                return ageOfEmployee;
-            }
-        }
-        public override int EmployeeID
-        {
-            get
-            {
-                return ID;
-            }
         }
         public override string CalculatePay()
         {
@@ -57,7 +36,7 @@ namespace Payroll
             total = Total;
             totalFICA = FICA;
             totalFIT = FIT;
-            return name + "     gross= " + weeklyPay + "     Fica= " + FICA + "     Federal Income Tax= " + FIT + "     Total= " + Total;
+            return Lname + ", " + Fname + "     gross= " + weeklyPay + "     Fica= " + FICA + "     Federal Income Tax= " + FIT + "     Total= " + Total;
         }
         public double GetTotal()
         {
