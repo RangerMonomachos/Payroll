@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Payroll
 {
-    abstract class Employee //a base class for both HourlyEmployee as well as SalariedEmployee
+    public abstract class Employee //a base class for both HourlyEmployee as well as SalariedEmployee
     {
         public abstract string name { get; }
         public abstract int Age { get; }

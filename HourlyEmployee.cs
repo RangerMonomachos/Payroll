@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Payroll
 {
-    class HourlyEmployee : Employee //set up from the abstract class Employee to serve as the Hourly employee objects
+    public class HourlyEmployee : Employee //set up from the abstract class Employee to serve as the Hourly employee objects
     {
         string Fname;
         string Lname;

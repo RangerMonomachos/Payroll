@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Payroll
 {
-    class MainController // this class is to make the main class in programs only hold three things, the two lists and the input for what choice is selected
+    public class MainController // this class is to make the main class in programs only hold three things, the two lists and the input for what choice is selected
     {
         public static string checkString(string input)
         {
             while (true)
-            { 
-                if(string.IsNullOrEmpty(input))
+            {
+                if (string.IsNullOrEmpty(input))
                 {
                     Console.WriteLine("Nothing detected. Try again");
                     input = Console.ReadLine();
@@ -29,11 +29,11 @@ namespace Payroll
         {
             bool corectinput = false;
             int output = 0;
-            while(corectinput == false)
+            while (corectinput == false)
             {
                 corectinput = int.TryParse(input, out output);
-                if(corectinput == false)
-                { 
+                if (corectinput == false)
+                {
                     Console.WriteLine("incorect input. try again.");
                     input = Console.ReadLine();
                 }
@@ -44,15 +44,15 @@ namespace Payroll
         {
             bool corectinput = false;
             double output = 0.0;
-            while(corectinput == false)
+            while (corectinput == false)
             {
                 corectinput = double.TryParse(input, out output);
                 if (corectinput == false)
-                { 
+                {
                     Console.WriteLine("incorect input. try again.");
                     input = Console.ReadLine();
                 }
-                
+
             }
             return output;
         }
